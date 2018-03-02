@@ -1,56 +1,70 @@
----
-layout: page
-title: Welcome!
-subtitle: My personal web page
----
+<!DOCTYPE html>
+<html lang="en">
 
-<!--
-<div class="main-explain-area jumbotron">
-  <p>Check out my blog on Open Data science!</p>
-</div>
--->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/creative.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <title>Ruslan Kamalov</title>
+</head>
 
-<!-- 
-<h1> Blog posts on Open Data Science: </h1> 
--->
+<body id="page-top" style = "background-color:black;bottom:0px;top:0px;text-align:fixed;">
+    <section style = "height:100%; min-height: 100%; /*position: fixed*/;">
+        <div class="container-fluid">
+            <!--picture-->
+            <div class="row">
+                <div class = "col-lg-3 col-med-3 col-sm-6">
+                    <center><img src="img/me.jpg" style = "height:100%; width: 100%;  border: 5px double darkgreen; margin-bottom:20px"></img></center>
+                </div>
+                <div class="col-lg-8 col-med-8 col-sm-6">
+                    <!--text-->
+                    <h2 class="section-heading" style="color:gray; font-size:50px; text-align:left; margin-top:0px">Hi, I'm Ruslan Kamalov</h2>
+        		    <h2 class="section-heading element" style = "color:white;font-size:13px;text-align:left; display: inline;"></h2>
 
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-	
-	  {% if post.subtitle %}
-	  <h3 class="post-subtitle">
-	    {{ post.subtitle }}
-	  </h3>
-	  {% endif %}  
-    </a>
+        		    <hr style = "margin-left:0px"; class = "primary2">
+        		    <p style = "color:white; text-align: left;">I'm interested in machine learning, natural language processing and deep learning.</p>
 
-    <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-  
-    <div class="post-entry">
-      {{ post.content | truncatewords: 50 | strip_html}}
-	  <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
-    </div>
-  
-   </article>
-  {% endfor %}
-</div>
+                    <!--icons-->
+                    <div style = "margin-left:0%">
+                        <a href = "mailto:ikarus5991@gmail.com0@gmail.com"><i class="fa fa-envelope-open fa-2x" aria-hidden="true" style = "margin-right:10px;"></i></a><!--aria-hidden="true"-->
+                        <a href = "https://github.com/KamalovRuslan"><i class="fa fa-github fa-2x" aria-hidden="true" style = "margin-right: 10px"></i></a>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pager main-pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+                        <a href = "resume.pdf"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true" style = "margin-right: 10px"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://use.fontawesome.com/efc19a65fc.js"></script>
+
+<!--typing-->
+<script>
+$(function myfunction(){
+$(".element").typed({
+    strings: ["Student at Moscow State University"],
+    typeSpeed: 3,
+    backDelay: 1000,
+    loop:true,
+    callback: function(){ 
+        
+        // console.log('end'); 
+    }
+});
+});
+</script>
+<script src = "typed.min.js"></script>
+<script src="typed.js"></script>
+
+</html>
